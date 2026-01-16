@@ -26,7 +26,7 @@ def get_stock_price(tickers):
                 change_percent = ((today-yesterday)/yesterday)*100
                 change_percent = round(change_percent,2)
                 change_in_percents.append(change_percent)
-                messages.append(f'Stock price for {ticker} - has changed by {change_percent} % today.')
+                messages.append(f'Stock {ticker} closed at {today}. Stock price for {ticker} - has changed by {change_percent} % today.')
     except Exception as e:
         print(e)
         raise(e)
